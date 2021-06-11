@@ -1,0 +1,95 @@
+/* resetting all the css in browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* global style */
+body {
+  font-family: "Merriweather", sans-serif;
+  background-color: #ebf2ff;
+}
+.button__primary {
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+  );
+  color: #ffff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* Navbar */
+/* alligning logo and button side by side */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar__brand {
+  width: 100px;
+}
+/* take all the remaining space */
+.navbar__logo {
+  width: 100%;
+}
+
+.hero__container {
+  width: 100%;
+}
+.hero__image {
+  width: 100%;
+}
+/* .nav__item {
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+  );
+  color: #ffff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+} */
+@media (min-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    /* top bottom right left */
+    padding: 10px 20px;
+  }
+  .navbar__brand {
+    width: 150px;
+  }
+  .nav__item {
+    font: size 20px;
+    padding: 20px;
+  }
+  .hero__container {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1020px) {
+  .container {
+    max-width: 1010px;
+    gap: 10px;
+  }
+  .hero__image__container {
+    width: 500px;
+    height: 500px;
+  }
+}
+@media (min-width: 1400px) {
+}
