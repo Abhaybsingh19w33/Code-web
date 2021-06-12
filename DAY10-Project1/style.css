@@ -1,16 +1,4 @@
-/* resetting all the css in browser */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* global style */
-body {
-  font-family: "Merriweather", sans-serif;
-  background-color: #ebf2ff;
-}
-.button__primary {
+/* .nav__item {
   background-image: linear-gradient(
     to right,
     #ff512f 0%,
@@ -21,12 +9,42 @@ body {
   padding: 12px;
   border: none;
   border-radius: 6px;
+} */
+
+/* resetting all the css in browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* To Box Model */
 }
+
+/* Global */
+body {
+  font-family: "Merriweather", sans-serif;
+  background-color: #ebf2ff;
+  overflow-x: hidden;
+}
+
+.button__primary {
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+  );
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }
+
 /* Navbar */
 /* alligning logo and button side by side */
 .navbar {
@@ -46,50 +64,60 @@ body {
 .hero__container {
   width: 100%;
 }
+.hero__image__container {
+  width: 100%;
+}
+
 .hero__image {
   width: 100%;
 }
-/* .nav__item {
-  background-image: linear-gradient(
-    to right,
-    #ff512f 0%,
-    #dd2476 51%,
-    #ff512f 100%
-  );
-  color: #ffff;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-} */
+.hero__text {
+  font-size: 30px;
+  color: #1d3557;
+  margin: 20px 0;
+}
+
+/* Menu Styles */
+
+.food__menu__card {
+  width: 100%;
+}
+
+.food__image {
+  width: 100%;
+}
 @media (min-width: 768px) {
   .navbar {
     justify-content: space-between;
-    /* top bottom right left */
     padding: 10px 20px;
   }
   .navbar__brand {
     width: 150px;
   }
-  .nav__item {
-    font: size 20px;
-    padding: 20px;
+  .button__primary {
+    padding: 12px 20px;
+    font-size: 20px;
   }
   .hero__container {
     display: flex;
     flex-direction: row-reverse;
-    text-align: center;
+    align-items: center;
     justify-content: space-between;
-  }
-}
-@media (min-width: 1020px) {
-  .container {
-    max-width: 1010px;
     gap: 10px;
   }
-  .hero__image__container {
-    width: 500px;
-    height: 500px;
+}
+
+@media (min-width: 1020px) {
+  .container {
+    max-width: 900px;
+  }
+  .hero__text {
+    font-size: 50px;
   }
 }
+
 @media (min-width: 1400px) {
+  .container {
+    max-width: 1250px;
+  }
 }
